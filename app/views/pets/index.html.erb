@@ -1,0 +1,12 @@
+<div class="container py-5">
+
+  <h1 class="text-center">See all Pets</h1>
+
+  <ul class="list-group">
+    <% @pets.each do |pet| %>
+      <li class="list-group-item"><%= link_to pet.name, pet_path(pet), class:'text-decoration-none' %> - <%= emoji(pet) %></li>
+    <% end %>
+  </ul>
+
+  <p><%= link_to 'Add pet', pets_new_path, class:'btn btn-dark my-3 float-end' %></p>
+</div>

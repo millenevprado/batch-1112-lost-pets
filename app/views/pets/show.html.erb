@@ -1,0 +1,12 @@
+<div class="container py-3">
+  <h1 class="text-center"> Pet info</h1>
+
+  <p><strong>Name:</strong><%= @pet.name %></p>
+  <p><strong>Address:</strong><%= @pet.address %></p>
+  <p><strong>Species:</strong><%= @pet.species %></p>
+  <p><strong>found_on:</strong><%= @pet.found_on %></p>
+
+  <%= link_to 'Back to pets', pets_path %> |
+  <%= link_to 'Edit', edit_pet_path(@pet) %> |
+  <%= link_to 'Adopted', pet_path(@pet), data: { turbo_method: 'delete', turbo_confirm: 'are u sure?' } %>
+</div>
